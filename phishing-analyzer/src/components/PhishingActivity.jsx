@@ -28,7 +28,6 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import DeleteIcon from "@mui/icons-material/Delete";
 import phishingAttempts from "../data/phishingAttempts.json";
-import PhishingResults from "./PhishingResults";
 import { useNavigate } from "react-router-dom";
 
 const ResultsDialog = ({ open, onClose, results }) => {
@@ -729,14 +728,20 @@ const PhishingActivity = () => {
       </Box>
     );
   };
-
+  //UI Starts Here
   return (
     <Container maxWidth="md">
       <Paper elevation={3} sx={{ p: 4, mt: 4 }}>
         <Box display="flex" alignItems="center" gap={2} mb={3}>
-          <Typography variant="h5">
-            Attempt {currentAttempt + 1} of {phishingAttempts.attempts.length}
+          <Typography variant="h4">
+            Click the Flag Icon next to any lines that could indicate the
+            message is a Phishing Attempt
           </Typography>
+        </Box>
+        <Box display="flex" alignItems="center" gap={2} mb={3}>
+          <Typography variant="h5">
+            Message {currentAttempt + 1} of {phishingAttempts.attempts.length}
+          </Typography>{" "}
           <Typography
             variant="subtitle1"
             sx={{
@@ -792,12 +797,6 @@ const PhishingActivity = () => {
           renderFeedback()
         )}
       </Paper>
-
-      <PhishingResults
-        open={showResults}
-        onClose={() => setShowResults(false)}
-        results={studentResponses}
-      />
     </Container>
   );
 };

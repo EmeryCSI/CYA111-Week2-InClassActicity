@@ -29,7 +29,8 @@ const Home = () => {
           >
             Test your skills in identifying phishing attempts in emails and SMS
             messages. Learn to spot the red flags and protect yourself from
-            online scams.
+            online scams. On the following screens CLICK THE FLAG icon on any
+            lines which might indicate that a message is a phish attempt.
           </Typography>
           <Button
             onClick={handleStartActivity}
