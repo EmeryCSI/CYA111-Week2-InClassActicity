@@ -1,9 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Box, Typography, Button, Paper, Container } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleStartActivity = () => {
+    console.log("LocalStorage Contents:", localStorage);
+    localStorage.clear();
+    navigate("/activity");
+  };
+
   return (
     <Container maxWidth="md">
       <Paper elevation={3} sx={{ p: 4, mt: 4 }}>
@@ -24,8 +32,7 @@ const Home = () => {
             online scams.
           </Typography>
           <Button
-            component={Link}
-            to="/analyzer"
+            onClick={handleStartActivity}
             variant="contained"
             color="primary"
             size="large"
@@ -36,7 +43,7 @@ const Home = () => {
               fontSize: "1.1rem",
             }}
           >
-            Start Analysis
+            Start Activity
           </Button>
         </Box>
       </Paper>

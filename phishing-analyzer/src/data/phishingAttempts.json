@@ -1,0 +1,312 @@
+{
+  "attempts": [
+    {
+      "id": 1,
+      "type": "email",
+      "content": [
+        "From: security@microsoft-support.com",
+        "Subject: Urgent: Your Account Security Alert",
+        "Dear Microsoft User,",
+        "We have detected unusual activity on your Microsoft account. Your account may have been compromised.",
+        "To secure your account, please click the link below and verify your identity:",
+        "https://microsoft-verify-account.com/secure",
+        "If you do not take action within 24 hours, your account will be suspended.",
+        "Best regards,",
+        "Microsoft Security Team"
+      ],
+      "redFlags": [
+        {
+          "id": "rf1-1",
+          "lineIndex": 0,
+          "description": "Suspicious sender email address",
+          "details": "The email comes from 'microsoft-support.com' instead of the legitimate 'microsoft.com' domain"
+        },
+        {
+          "id": "rf1-2",
+          "lineIndex": 1,
+          "description": "Urgency and fear tactics",
+          "details": "Uses urgent language and threats of account suspension to pressure the recipient"
+        },
+        {
+          "id": "rf1-3",
+          "lineIndex": 2,
+          "description": "Generic greeting",
+          "details": "Uses 'Dear Microsoft User' instead of the account holder's name"
+        },
+        {
+          "id": "rf1-4",
+          "lineIndex": 5,
+          "description": "Suspicious link",
+          "details": "The verification link points to a non-Microsoft domain"
+        },
+        {
+          "id": "rf1-5",
+          "lineIndex": 6,
+          "description": "Urgency and fear tactics",
+          "details": "Threatens account suspension within 24 hours"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "sms",
+      "content": [
+        "From: Amazon",
+        "AMAZON: Your package delivery failed. Click here to reschedule: bit.ly/amzn-delivery-123"
+      ],
+      "redFlags": [
+        {
+          "id": "rf2-1",
+          "lineIndex": 1,
+          "description": "Shortened URL",
+          "details": "Uses a shortened URL (bit.ly) which hides the actual destination"
+        },
+        {
+          "id": "rf2-2",
+          "lineIndex": 1,
+          "description": "No order reference",
+          "details": "Does not mention any specific order number or package details"
+        },
+        {
+          "id": "rf2-3",
+          "lineIndex": 0,
+          "description": "Generic sender name",
+          "details": "Sender is just 'Amazon' instead of a verified sender ID"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "email",
+      "content": [
+        "From: billing@netflix-support.org",
+        "Subject: Your Netflix subscription has expired",
+        "Hello,",
+        "We noticed your Netflix subscription has expired. To avoid interruption of your service, please update your payment information by clicking here: http://netflix-payment-update.com",
+        "Your current payment method on file:",
+        "Card ending in: ****1234",
+        "If you did not make this request, please contact our support team.",
+        "Netflix Customer Service"
+      ],
+      "redFlags": [
+        {
+          "id": "rf3-1",
+          "lineIndex": 0,
+          "description": "Fake domain",
+          "details": "Email comes from 'netflix-support.org' instead of 'netflix.com'"
+        },
+        {
+          "id": "rf3-2",
+          "lineIndex": 3,
+          "description": "Suspicious link",
+          "details": "Payment update link points to a non-Netflix domain"
+        },
+        {
+          "id": "rf3-3",
+          "lineIndex": 3,
+          "description": "Fake urgency",
+          "details": "Creates false urgency about subscription expiration"
+        },
+        {
+          "id": "rf3-4",
+          "lineIndex": 5,
+          "description": "Partial card information",
+          "details": "Shows partial card number to appear legitimate"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "social",
+      "content": [
+        "From: HR Recruiter",
+        "Hi! I came across your profile and I'm impressed with your experience. We have an immediate opening for a Senior Developer position with a $150k salary. Please send your resume to careers@techcompany-hr.com"
+      ],
+      "redFlags": [
+        {
+          "id": "rf4-1",
+          "lineIndex": 1,
+          "description": "Vague job details",
+          "details": "Does not specify the company name or specific job requirements"
+        },
+        {
+          "id": "rf4-2",
+          "lineIndex": 1,
+          "description": "High salary bait",
+          "details": "Uses an attractive salary to lure victims"
+        },
+        {
+          "id": "rf4-3",
+          "lineIndex": 1,
+          "description": "Suspicious email domain",
+          "details": "Uses a generic email domain instead of a company-specific one"
+        },
+        {
+          "id": "rf4-4",
+          "lineIndex": 1,
+          "description": "Immediate response request",
+          "details": "Pressures for quick action without proper interview process"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "email",
+      "content": [
+        "From: no-reply@apple-security.com",
+        "Subject: Your Apple ID was used to sign in to a new device",
+        "Apple Security Alert",
+        "Your Apple ID was used to sign in to an iPhone 13 in New York, NY.",
+        "If this was you, you can ignore this email.",
+        "If this wasn't you, please secure your account immediately:",
+        "https://apple-id-verification.com/secure",
+        "Apple Inc.",
+        "1 Apple Park Way",
+        "Cupertino, CA 95014"
+      ],
+      "redFlags": [
+        {
+          "id": "rf5-1",
+          "lineIndex": 0,
+          "description": "Fake Apple domain",
+          "details": "Email comes from 'apple-security.com' instead of 'apple.com'"
+        },
+        {
+          "id": "rf5-2",
+          "lineIndex": 6,
+          "description": "Suspicious link",
+          "details": "Security link points to a non-Apple domain"
+        },
+        {
+          "id": "rf5-3",
+          "lineIndex": 8,
+          "description": "Fake address",
+          "details": "Includes Apple's real address to appear legitimate"
+        },
+        {
+          "id": "rf5-4",
+          "lineIndex": 3,
+          "description": "Specific device details",
+          "details": "Mentions specific device model and location to create credibility"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "email",
+      "content": [
+        "From: auto-confirm@amazon.com",
+        "Subject: Your Amazon Order #123-4567890-1234567",
+        "Hello John,",
+        "Thank you for your order. We'll send a confirmation when your package ships.",
+        "Order Details:",
+        "- Order #123-4567890-1234567",
+        "- Order Date: March 15, 2024",
+        "- Estimated Delivery: March 18-20, 2024",
+        "You can track your package or make changes to your order by visiting Your Orders on Amazon.com.",
+        "Thank you for shopping with Amazon."
+      ],
+      "redFlags": [],
+      "isLegitimate": true
+    },
+    {
+      "id": 7,
+      "type": "email",
+      "content": [
+        "From: account@netflix.com",
+        "Subject: Your Netflix receipt for March 2024",
+        "Hi John,",
+        "Thanks for being a Netflix member. Here's your receipt for your March 2024 payment.",
+        "Amount: $15.49",
+        "Date: March 1, 2024",
+        "Payment Method: Visa ending in 1234",
+        "You can view your billing history and update your payment method at any time by visiting your Account page on Netflix.com.",
+        "If you have any questions, please contact customer service.",
+        "- The Netflix Team"
+      ],
+      "redFlags": [],
+      "isLegitimate": true
+    },
+    {
+      "id": 8,
+      "type": "email",
+      "content": [
+        "From: account-security-noreply@account.microsoft.com",
+        "Subject: Your Microsoft account security code",
+        "Hi John,",
+        "Your Microsoft account security code is: 123456",
+        "If you didn't request this code, you can safely ignore this email. Someone else might have typed your email address by mistake.",
+        "Thanks,",
+        "The Microsoft account team"
+      ],
+      "redFlags": [],
+      "isLegitimate": true
+    },
+    {
+      "id": 9,
+      "type": "email",
+      "content": [
+        "From: no_reply@email.apple.com",
+        "Subject: Your Apple receipt",
+        "Dear John,",
+        "Thank you for your purchase.",
+        "Order Number: W123456789",
+        "Date: March 15, 2024",
+        "You can view your order status and shipment tracking at apple.com/orderstatus.",
+        "If you have any questions, contact Apple Support.",
+        "Apple Inc.",
+        "1 Apple Park Way",
+        "Cupertino, CA 95014"
+      ],
+      "redFlags": [],
+      "isLegitimate": true
+    },
+    {
+      "id": 10,
+      "type": "email",
+      "content": [
+        "From: service@paypal-security.com",
+        "Subject: Your PayPal account has been limited",
+        "Dear PayPal User,",
+        "We have detected unusual activity on your PayPal account. For your security, we have temporarily limited your account.",
+        "To restore full access to your account, please verify your identity by clicking the link below:",
+        "https://paypal-verify-account.com/secure",
+        "You have 48 hours to complete this verification. Failure to do so will result in permanent account closure.",
+        "Sincerely,",
+        "PayPal Security Team"
+      ],
+      "redFlags": [
+        {
+          "id": "rf10-1",
+          "lineIndex": 0,
+          "description": "Fake PayPal domain",
+          "details": "Email comes from 'paypal-security.com' instead of 'paypal.com'"
+        },
+        {
+          "id": "rf10-2",
+          "lineIndex": 1,
+          "description": "Urgency tactics",
+          "details": "Subject line creates false urgency about account limitation"
+        },
+        {
+          "id": "rf10-3",
+          "lineIndex": 2,
+          "description": "Generic greeting",
+          "details": "Uses 'Dear PayPal User' instead of the account holder's name"
+        },
+        {
+          "id": "rf10-4",
+          "lineIndex": 5,
+          "description": "Suspicious link",
+          "details": "Verification link points to a non-PayPal domain"
+        },
+        {
+          "id": "rf10-5",
+          "lineIndex": 6,
+          "description": "Urgency tactics",
+          "details": "Threatens permanent account closure within 48 hours"
+        }
+      ]
+    }
+  ]
+}

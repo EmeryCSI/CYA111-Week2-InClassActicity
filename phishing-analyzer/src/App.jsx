@@ -1,9 +1,12 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { theme } from "./theme";
 import Home from "./components/Home";
 import Analyzer from "./components/Analyzer";
+import PhishingActivity from "./components/PhishingActivity";
+import Results from "./components/Results";
 import "./App.css";
 
 function App() {
@@ -15,6 +18,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/analyzer" element={<Analyzer />} />
+            <Route path="/activity" element={<PhishingActivity />} />
+            <Route path="/results" element={<Results />} />
           </Routes>
         </div>
       </Router>
