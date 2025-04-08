@@ -6,6 +6,7 @@ import { theme } from "./theme";
 import Home from "./components/Home";
 import PhishingActivity from "./components/PhishingActivity";
 import Results from "./components/Results";
+import VerifySubmit from "./components/VerifySubmit";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/activity" element={<PhishingActivity />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/verify" element={<VerifySubmit />} />
           </Routes>
         </div>
       </Router>
